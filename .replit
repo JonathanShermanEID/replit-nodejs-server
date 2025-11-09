@@ -1,0 +1,12 @@
+modules = ["nodejs-20"]
+run = "npx tsx server/index.ts"
+
+[nix]
+channel = "stable_25_05"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[agent]
+integrations = ["javascript_openai_ai_integrations:1.0.0", "dropbox:1.0.0"]
